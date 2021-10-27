@@ -13,6 +13,7 @@ export class UsersService {
   }
 
   findOne(id: number) {
+    if (!id) return null;
     return this.repo.findOne(id);
   }
 
@@ -23,11 +24,12 @@ export class UsersService {
   async update(id: number, patch: Partial<User>) {
     const user = await this.repo.findOne(id);
     if (!user) throw new NotFoundException(`user with id ${id} not found`);
+
     Object.assign(user, patch);
     return this.repo.save(user);
   }
 
-  async remove(id: string) {
+  async remove(id: number) {
     const user = await this.repo.findOne(id);
     if (!user) throw new NotFoundException(`user with id ${id} not found`);
     return this.repo.remove(user);
