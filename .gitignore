@@ -1,6 +1,8 @@
 # compiled output
 /dist
 /node_modules
+**.sqlite
+**/.env.*
 
 # Logs
 logs
@@ -34,4 +36,3 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-db.sqlite

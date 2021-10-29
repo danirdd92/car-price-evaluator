@@ -1,5 +1,4 @@
 import { IsEmail, IsString, IsOptional, isEmail } from 'class-validator';
-import { User } from '../user.entity';
 
 export class UpdateUserDto {
   @IsEmail()

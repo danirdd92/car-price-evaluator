@@ -1,5 +1,5 @@
 import { NestInterceptor, ExecutionContext, CallHandler, Injectable } from '@nestjs/common';
-import { Observable, retry } from 'rxjs';
+import { Observable } from 'rxjs';
 import { UsersService } from '../users.service';
 
 @Injectable()
