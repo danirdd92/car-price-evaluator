@@ -1,5 +1,5 @@
 import { report } from 'process';
-import { Report } from 'src/reports/report.entity';
+import { Report } from '../reports/report.entity';
 import {
   AfterInsert,
   Entity,
